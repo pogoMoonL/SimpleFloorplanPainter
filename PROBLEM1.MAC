@@ -1,0 +1,5 @@
+.chip_bbox (100, 100)
+.module A 50 40
+.module B 60 50
+.module C 60 50
+.module D 50 40
