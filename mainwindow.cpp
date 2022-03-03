@@ -28,6 +28,8 @@ MainWindow::MainWindow(QWidget *parent)
     win_height = 600;
     this->setFixedSize(win_width, win_height);	//視窗大小
     My_Init();
+    cout << "Hello World!";
+
 }
 
 MainWindow::~MainWindow()
@@ -44,7 +46,9 @@ void My_Init(){
 
     ifstream fin;
     int x, y, w, h, r, id;
+
     fin.open("/Users/huangyaode/code/SimpleFloorplanPainter/result.rpt", ios::in);
+    
     if (!fin) { 
         cerr << "read fail\n"; exit(0); 
     }
@@ -72,8 +76,12 @@ void My_Init(){
 
 // 繪圖事件, 用来產生背景
 // 會自動一直 call 他
+
+// 調用 update/repaint 就可以呼叫 paintEvent
 void MainWindow::paintEvent(QPaintEvent *)
 {
+    cout << "Hello World!2";
+
     QPainter painter(this);
     // this 代表 Main Window
     // 代表這個 painter 是要畫在 Main Window 上
