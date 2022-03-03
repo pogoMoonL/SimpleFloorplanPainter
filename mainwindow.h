@@ -3,11 +3,13 @@
 
 #include <QMainWindow>
 
+// QMainWindow
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+     // null vs nullptr[c++11] ; explicit
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 protected:

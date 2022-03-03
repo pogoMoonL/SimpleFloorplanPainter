@@ -12,7 +12,9 @@ typedef struct _REC_{
     int id;
 } Rec;
 
+// 或許可用 tuple 
 Rec *rec;
+
 int n; // #sub-blocks
 double boundarySize;
 
@@ -22,8 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     // The constructor of MainWindow
-    win_width = 500;
-    win_height = 500;
+    win_width = 600;
+    win_height = 600;
     this->setFixedSize(win_width, win_height);	//視窗大小
     My_Init();
 }
