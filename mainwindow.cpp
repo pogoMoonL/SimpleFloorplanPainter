@@ -37,12 +37,18 @@ MainWindow::~MainWindow()
 
 // 讀檔
 void My_Init(){
+
+    // ofstream 檔案寫操作 記憶體寫入儲存裝置
+    // ifstream 檔案讀操作，儲存裝置讀區到記憶體中
+    // fstream讀寫操作，對開啟的檔案可進行讀寫操作
+
     ifstream fin;
     int x, y, w, h, r, id;
     fin.open("/Users/huangyaode/code/SimpleFloorplanPainter/result.rpt", ios::in);
     if (!fin) { 
         cerr << "read fail\n"; exit(0); 
     }
+    //  邊界紅色的部分要多大
     fin >> n >> boundarySize; // boundary 邊界
 
     rec = new Rec[n]; // How many macro cell in inside boundary
